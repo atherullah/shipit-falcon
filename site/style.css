@@ -214,3 +214,121 @@ footer .copyright {
   }
 }
 
+
+/* Individual Team Member Profile */
+
+.profile-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 65px 8%;
+  background: linear-gradient(120deg, #101d3b, #172b50, #25194c);
+}
+
+.profile-avatar {
+  width: 125px;
+  height: 125px;
+  min-width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #248fe0, #7856d9);
+  border: 4px solid rgba(255,255,255,0.2);
+  font-size: 55px;
+  font-weight: bold;
+  box-shadow: 0 8px 30px rgba(35,135,220,0.3);
+}
+
+.profile-hero h1 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.profile-hero p {
+  color: #c3cee2;
+  font-size: 17px;
+}
+
+.profile-container {
+  max-width: 950px;
+  margin: 45px auto;
+  padding: 0 20px;
+}
+
+.profile-box {
+  background: #111b30;
+  border: 1px solid #263653;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 22px;
+  transition: 0.3s;
+}
+
+.profile-box:hover {
+  border-color: #48b6ff;
+  transform: translateY(-3px);
+}
+
+.profile-box h2 {
+  color: #58baff;
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+
+.profile-box p {
+  color: #c3cee2;
+  line-height: 1.9;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-list span {
+  padding: 9px 16px;
+  background: #1b3152;
+  color: #72caff;
+  border: 1px solid #31527b;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 10px 0 30px;
+  background: #278fe0;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #176fbd;
+}
+
+@media (max-width: 600px) {
+  .profile-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 45px 20px;
+  }
+
+  .profile-hero h1 {
+    font-size: 28px;
+  }
+
+  .profile-container {
+    margin-top: 25px;
+  }
+
+  .profile-box {
+    padding: 20px;
+  }
+}
