@@ -1,8 +1,11 @@
 name: Test Deployment SSH Access
 
 on:
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
-
 jobs:
   test-ssh:
     runs-on: ubuntu-latest
