@@ -32,8 +32,6 @@ Each member leads one area, but everyone works in every phase.
 | What | Where |
 | --- | --- |
 | Live site | http://DOMAIN |
-| Status page | http://DOMAIN/live/status.html |
-| Traffic report | http://DOMAIN/live/report.html |
 | Repository | https://github.com/atherullah/shipit-falcon |
 | Jira board | https://nahalsworkspace-39376139.atlassian.net/jira/software/projects/DEVOPS/boards/2?filter=&groupBy=none (project key `DEVOPS`) |
 | Slack | https://app.slack.com/client/T0CJBT87XA6/C0CJA8Z3QVC (channels `#falcon`, `#falcon-dev`, `#falcon-alerts`) |
