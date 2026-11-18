@@ -5,8 +5,6 @@
 
 Team name: **DevOps Warriors** (technical name `falcon`, Jira project key `DEVOPS`).
 
-Replace `DOMAIN` and `SERVER_IP` with your team's real values.
-
 ## Team
 
 | Member | GitHub username | Role |
@@ -31,7 +29,7 @@ Each member leads one area, but everyone works in every phase.
 
 | What | Where |
 | --- | --- |
-| Live site | http://DOMAIN |
+| Live site | http://devopwarriors.duckdns.org |
 | Repository | https://github.com/atherullah/shipit-falcon |
 | Jira board | https://nahalsworkspace-39376139.atlassian.net/jira/software/projects/DEVOPS/boards/2?filter=&groupBy=none (project key `DEVOPS`) |
 | Slack | https://app.slack.com/client/T0CJBT87XA6/C0CJA8Z3QVC (channels `#falcon`, `#falcon-dev`, `#falcon-alerts`) |
@@ -72,7 +70,7 @@ Each member leads one area, but everyone works in every phase.
 - Each member has their own Linux user and logs in with their own SSH key. Password login is off.
 - A `team` group holds all members. A separate `deploy` user runs deployments.
 - Only ports **22** (SSH) and **80** (HTTP) are open.
-- Nginx serves `/var/www/falcon/current` at `http://DOMAIN` and `/var/www/falcon/live` at `http://DOMAIN/live/`. The bare IP does not show the site.
+- Nginx serves `/var/www/falcon/current` at `http://devopwarriors.duckdns.org` and `/var/www/falcon/live` at `http://devopwarriors.duckdns.org/live/`. The bare IP does not show the site.
 - Access log: `/var/log/nginx/falcon.access.log`
 
 ```
@@ -102,7 +100,7 @@ A red check means don't merge.
 5. Append a line to `deploys.log`.
 6. Keep only the 5 newest releases.
 7. Copy the scripts to `bin/` and install the `deploy` user's crontab.
-8. Run a health check from the GitHub runner: it fails unless `http://DOMAIN` answers and shows the new commit.
+8. Run a health check from the GitHub runner: it fails unless `http://devopwarriors.duckdns.org` answers and shows the new commit.
 9. Post the result (success or failure, commit, author, run link) to `#falcon-alerts`.
 
 Two deployments never run at the same time.
@@ -137,12 +135,6 @@ git add .
 git commit -m "DEVOPS-<number> <what you changed>"
 git push origin DEVOPS-<number>-<short-name>
 # open a pull request, ask for review in #falcon
-```
-
-To open the site from your laptop, map the domain to the server in your hosts file:
-
-```
-SERVER_IP  DOMAIN
 ```
 
 ## Incident process
